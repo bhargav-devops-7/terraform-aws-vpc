@@ -60,6 +60,7 @@ resource "aws_subnet" "private" {
     {
         Name = "${local.common_name_suffix}-private-${local.az_names[count.index]}"
     }
+  )
 }
 
 # Database Subnet
