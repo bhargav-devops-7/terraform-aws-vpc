@@ -131,7 +131,7 @@ resource "aws_eip" "nat" {
 
   tags = merge(
     var.elastic_ip_tags,
-    local.common_tags
+    local.common_tags,
 	  {
     		Name = "${local.common_name_suffix}-nat"
   	}
@@ -147,7 +147,7 @@ resource "aws_nat_gateway" "nat" {
 
   tags = merge(
     var.ngw_tags,
-    local.common_tags
+    local.common_tags,
 	  {
     		Name = "${local.common_name_suffix}-ngw"
   	}
