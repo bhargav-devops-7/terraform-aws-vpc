@@ -72,3 +72,8 @@ variable "ngw_tags" {
     type = map
     default = {}
 }
+
+variable "is_peering_connection_required" {
+    type = bool
+    default = true
+}
